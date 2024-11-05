@@ -1,0 +1,5 @@
+@startuml
+interface iResidenzaRepo << Repository >> << Query("SELECT r FROM ResidenzaPojo r WHERE r.indirizzo = :indirizzo AND r.citta = :citta AND r.cap = :cap") >> << Param("indirizzo") >> << Param("citta") >> << Param("cap") >> {
+}
+iResidenzaRepo --|> JpaRepository
+@enduml

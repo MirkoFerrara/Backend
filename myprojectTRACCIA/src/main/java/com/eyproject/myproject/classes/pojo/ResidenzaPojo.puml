@@ -1,0 +1,20 @@
+@startuml
+class ResidenzaPojo << @Entity >> << @Table >> {
+    -id: Integer << @Id >> << @GeneratedValue(strategy = GenerationType.IDENTITY) >>
+    -indirizzo: String << @Column(nullable = false) >>
+    -citta: String << @Column(nullable = false) >>
+    -cap: Integer << @Column(nullable = false) >>
+    -persona: PersonaPojo << @OneToOne >> << @JoinColumn(name="id_anagrafica", referencedColumnName = "id") >>
+    --
+    +getId(): Integer
+    +setId(Integer id)
+    +getCap(): Integer
+    +setCap(Integer cap)
+    +getIndirizzo(): String
+    +setIndirizzo(String indirizzo)
+    +getCitta(): String
+    +setCitta(String citta)
+    +getPersona(): PersonaPojo
+    +setPersona(PersonaPojo persona)
+}
+@enduml

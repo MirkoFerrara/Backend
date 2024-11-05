@@ -1,0 +1,14 @@
+@startuml
+class Response {
+    -responseCode: boolean
+    -Msg: String
+    ~responseCode: return
+    ~Msg: return
+
+    +isResponseCode(): boolean
+    +setResponseCode(boolean: responseCode)
+    +getMsg(): String
+    +setMsg(String: msg)
+}
+
+@enduml

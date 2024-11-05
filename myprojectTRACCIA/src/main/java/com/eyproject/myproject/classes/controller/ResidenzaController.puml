@@ -1,0 +1,14 @@
+@startuml
+class ResidenzaController << @RestController >> << @RequestMapping("/residenza") >> {
+    -residenzaService: iResidenzaService << @Autowired >>
+    ~response: Response
+    ~response: Response
+    ~response: Response
+    ~response: ResponseListData<ResidenzaDTO>
+    --
+    -create(<<@RequestBody>> ResidenzaDTO residenzaDTO): Response << @PostMapping("/create") >> << @RequestBody >>
+    -update(<<@RequestBody>> ResidenzaDTO residenzaDTO): Response << @PostMapping("/update") >> << @RequestBody >>
+    -remove(<<@RequestParam>> Integer id): Response << @PostMapping("/remove") >> << @RequestParam >>
+    -list(): ResponseListData<ResidenzaDTO> << @GetMapping("/list") >>
+}
+@enduml
