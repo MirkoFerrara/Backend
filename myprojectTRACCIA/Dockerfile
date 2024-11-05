@@ -31,9 +31,8 @@ EXPOSE 8080
 ENV SPRING_DATASOURCE_URL=jdbc:h2:mem:testdb \
     SPRING_DATASOURCE_USERNAME=root \
     SPRING_DATASOURCE_PASSWORD=root \
-    SPRING_JPA_DATABASE_PLATFORM=org.hibernate.dialect.H2Dialect \
     SPRING_H2_CONSOLE_ENABLED=true \
     SPRING_JPA_HIBERNATE_DDL_AUTO=update
 
 # Avvia l'applicazione
-ENTRYPOINT ["java", "-jar", "app.jar"]
+ENTRYPOINT ["java", "-XX:+UseContainerSupport", "-XX:MaxRAMPercentage=75.0", "-jar", "app.jar"]
