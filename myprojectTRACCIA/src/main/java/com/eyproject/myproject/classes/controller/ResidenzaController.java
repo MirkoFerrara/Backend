@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import com.eyproject.myproject.interfaces.iService.iResidenzaService;
 
 @RestController
-@RequestMapping("/residenza")
+@RequestMapping("/api/residenza")
 public class ResidenzaController {
 
     @Autowired

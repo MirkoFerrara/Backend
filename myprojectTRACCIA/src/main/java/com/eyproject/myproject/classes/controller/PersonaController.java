@@ -11,7 +11,7 @@ import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/persona")
+@RequestMapping("/api/persona")
 public class PersonaController {
 
     @Autowired
